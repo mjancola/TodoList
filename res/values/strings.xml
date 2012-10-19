@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TodoList</string>
+    <string name="addItemHint">Add Todo Item</string>
+    <string name="addItemContentDescription"></string>
+</resources>
