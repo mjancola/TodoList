@@ -1,5 +1,6 @@
 package org.hopto.mjancola.todolist;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentActivity;
@@ -7,7 +8,8 @@ import android.widget.ArrayAdapter;
 
 import java.util.ArrayList;
 
-public class TodoListActivity extends FragmentActivity implements NewItemFragment.OnNewItemAddedListener
+public class TodoListActivity extends FragmentActivity implements NewItemFragment.OnNewItemAddedListener,
+                                        ExpandableListButtonFragment.ExpandableListButtonListener
 {
 
     private ArrayAdapter<String> aa;
@@ -44,5 +46,12 @@ public class TodoListActivity extends FragmentActivity implements NewItemFragmen
     {
         todoItems.add(String.valueOf(todoItems.size() +1) + ". " + newItem);
         aa.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onExpandableListButtonPress()
+    {
+        Intent intent = ExpandableListActivity.createIntent(TodoListActivity.this);
+        startActivity(intent);
     }
 }

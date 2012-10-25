@@ -3,4 +3,6 @@
     <string name="app_name">TodoList</string>
     <string name="addItemHint">Add Todo Item</string>
     <string name="addItemContentDescription"></string>
+    <string name="EXPANDABLE_LIST_BUTTON_TEXT">GO</string>
+    <string name="EXPANDABLE_LIST_MESSAGE">Press to Expand</string>
 </resources>
